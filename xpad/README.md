@@ -33,12 +33,10 @@ computer MIDI keyboard or any MIDI controller.
 
 ## Install / use
 
-1. During development, keep `XPad.amxd`, `xpad_voice.maxpat`, and
-   `xpad_generate.js` in this workspace. The AMXD build binds both dependencies
-   to their absolute paths here because Live does not search beside an
-   externally dragged AMXD reliably.
-2. Drag `XPad.amxd` directly from this workspace onto a MIDI track, arm the
-   track, and play notes.
+1. Extract the complete XPad download and keep `XPad.amxd`,
+   `xpad_voice.maxpat`, and `xpad_generate.js` together.
+2. Add the extracted XPad folder to Live's Browser under **Places**, then drag
+   `XPad.amxd` onto a MIDI track, arm the track, and play notes.
 3. Click **GENERATE** whenever you want to permanently leave the current pad.
 4. Save the Live Set normally to preserve the current pad and knob positions.
 

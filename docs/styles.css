@@ -130,7 +130,9 @@ h1 em { color: var(--lime); font-style: normal; }
 .device-type { margin: 36px 0 10px; color: var(--accent); font-size: .69rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
 .device-card h3 { margin-bottom: 18px; font-size: 3.2rem; }
 .device-card > p:last-of-type { max-width: 34ch; margin: 0; color: #aeb2aa; }
-.device-card a { margin-top: auto; padding-top: 32px; color: var(--ink); font-size: .84rem; font-weight: 750; text-decoration: none; }
+.card-actions { margin-top: auto; padding-top: 32px; display: flex; align-items: center; gap: 18px; }
+.device-card .card-actions a { color: var(--ink); font-size: .8rem; font-weight: 750; text-decoration: none; }
+.device-card .card-actions .download { padding: 8px 11px; border: 1px solid var(--accent); border-radius: 3px; color: var(--accent); }
 .device-card a span { color: var(--accent); }
 .accent-violet { --accent: #a68cff; }
 .accent-cyan { --accent: #58d9e8; }
@@ -138,7 +140,16 @@ h1 em { color: var(--lime); font-style: normal; }
 .accent-orange { --accent: #ff9d50; }
 .accent-pink { --accent: #ff72aa; }
 
+.install,
 .principles { padding: 116px 0; border-top: 1px solid var(--line); }
+.install { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+.install-steps { margin: 0 0 38px 33.333%; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.install-steps li { display: grid; grid-template-columns: 70px 1fr; gap: 24px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.install-steps li > span { color: var(--lime); font: .72rem ui-monospace, monospace; }
+.install-steps h3 { margin-bottom: 8px; font-size: 1.55rem; letter-spacing: -.02em; }
+.install-steps p { max-width: 620px; margin: 0; color: var(--muted); }
+.install-note { margin: 0 0 0 33.333%; padding: 20px; border-left: 3px solid var(--lime); background: var(--surface); color: #b9bdb4; }
+.install-note strong { color: var(--ink); }
 .principle-list { margin-left: 33.333%; border-top: 1px solid var(--line); }
 .principle-list article { display: grid; grid-template-columns: 70px 1fr; gap: 24px; padding: 30px 0; border-bottom: 1px solid var(--line); }
 .principle-list article > span { color: var(--lime); font: .72rem ui-monospace, monospace; }
@@ -162,6 +173,8 @@ footer p { color: var(--muted); font-size: .8rem; }
   .device-grid { grid-template-columns: 1fr; }
   .device-card,
   .device-card:nth-last-child(-n+2) { grid-column: auto; min-height: 310px; }
+  .install-steps,
+  .install-note,
   .principle-list { margin-left: 0; }
   .cta { padding: 60px 26px; }
   footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; }

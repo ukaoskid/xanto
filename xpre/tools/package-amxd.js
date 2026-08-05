@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, "..");
 const source = path.join(root, "XPre.maxpat");
 const destination = path.join(root, "XPre.amxd");
 const patch = JSON.parse(fs.readFileSync(source, "utf8"));
-const enginePath = path.join(root, "xpre_engine.js");
+const enginePath = "xpre_engine.js";
 
 for (const entry of patch.patcher.boxes) {
   if (entry.box.id === "engine") {
@@ -16,6 +16,13 @@ for (const entry of patch.patcher.boxes) {
   }
 }
 patch.patcher.dependency_cache = [{ name: enginePath, type: "TEXT", implicit: 1 }];
+patch.patcher.project = {
+  version: 1, creationdate: 3868759470, modificationdate: 3868759470,
+  viewrect: [0, 0, 300, 500], autoorganize: 1, hideprojectwindow: 1,
+  showdependencies: 1, autolocalize: 0, contents: { patchers: {} },
+  layout: {}, searchpath: {}, detailsvisible: 0, amxdtype: 1633771873,
+  readonly: 0, devpathtype: 0, devpath: ".", sortmode: 0, viewmode: 0
+};
 
 const patchJson = Buffer.from(`${JSON.stringify(patch, null, 2)}\n`, "utf8");
 const formHeader = Buffer.concat([

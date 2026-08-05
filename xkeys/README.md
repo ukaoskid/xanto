@@ -48,11 +48,10 @@ Attack/Release settings use small safety ramps to avoid clicks.
 
 ## Install / use
 
-1. Keep `XKeys.amxd`, `xkeys_voice.maxpat`, and `xkeys_generate.js` together
-   during development. The AMXD package binds the two dependencies to their
-   absolute workspace paths because Live does not reliably search beside an
-   externally dragged AMXD.
-2. Drag `XKeys.amxd` onto a MIDI track, arm the track, and play notes.
+1. Extract the complete XKeys download and keep `XKeys.amxd`,
+   `xkeys_voice.maxpat`, and `xkeys_generate.js` together.
+2. Add the extracted XKeys folder to Live's Browser under **Places**, then drag
+   `XKeys.amxd` onto a MIDI track, arm the track, and play notes.
 3. Click **GENERATE** whenever you want to permanently leave the current sound.
 4. Save the Live Set normally to preserve the generated sound and controls.
 

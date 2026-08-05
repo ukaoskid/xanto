@@ -9,16 +9,14 @@ const destination = path.join(root, "XPad.amxd");
 
 const patch = JSON.parse(fs.readFileSync(source, "utf8"));
 
-// Live hosts an AMXD from an internal location and does not reliably add the
-// source AMXD's sibling folder to Max's search path. During development, bind
-// the two external dependencies to this workspace explicitly. The editable
-// maxpat remains relative/portable; only the generated AMXD receives these
-// absolute development paths.
+// Keep dependency names relative so the package is portable when the complete
+// XPad folder is copied to another machine. A frozen distribution build will
+// embed these files into the AMXD.
 const boxes = Object.fromEntries(
     patch.patcher.boxes.map((entry) => [entry.box.id, entry.box])
 );
-const generatorPath = path.join(root, "xpad_generate.js");
-const voicePath = path.join(root, "xpad_voice.maxpat");
+const generatorPath = "xpad_generate.js";
+const voicePath = "xpad_voice.maxpat";
 
 boxes.js.text = `js ${generatorPath}`;
 boxes.js.saved_object_attributes = {
@@ -26,6 +24,27 @@ boxes.js.saved_object_attributes = {
     parameter_enable: 0
 };
 boxes.poly.text = `poly~ ${voicePath} 8 @steal 1`;
+
+patch.patcher.project = {
+    version: 1,
+    creationdate: 3868759470,
+    modificationdate: 3868759470,
+    viewrect: [0, 0, 300, 500],
+    autoorganize: 1,
+    hideprojectwindow: 1,
+    showdependencies: 1,
+    autolocalize: 0,
+    contents: { patchers: {} },
+    layout: {},
+    searchpath: {},
+    detailsvisible: 0,
+    amxdtype: 1768515945,
+    readonly: 0,
+    devpathtype: 0,
+    devpath: ".",
+    sortmode: 0,
+    viewmode: 0
+};
 
 const patchJson = Buffer.from(`${JSON.stringify(patch, null, 2)}\n`, "utf8");
 

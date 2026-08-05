@@ -20,9 +20,9 @@ node tools/build-device.mjs
 
 ## Load it in Ableton Live
 
-1. Drag `XOrds.amxd` onto a MIDI track before an Ableton or third-party
-   instrument. The engine is embedded inside the `.amxd`; no sidecar file is
-   required at runtime.
+1. Drag `XOrds.amxd` onto a MIDI track **before an Ableton or third-party
+   instrument**. XOrds produces MIDI notes, not audio. The engine is embedded
+   inside the `.amxd`; no sidecar file is required at runtime.
 2. Play MIDI notes 48–72 by default. Click **Learn** under **Lowest Key**, then
    press the lowest key on your controller to map its 25 keys.
 3. Use **Panic** if a downstream instrument ever leaves notes active.

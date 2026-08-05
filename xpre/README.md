@@ -20,14 +20,17 @@ duration as the dropped file.
 
 ## Workflow
 
-1. Put `XPre.amxd` on a dedicated Arrangement audio track.
-2. Drop an audio file from Live's Browser or Finder into the source area.
-3. Set **REVERB** and **MIX**.
-4. Press **GENERATE**. Generating again replaces the current internal result.
-5. Press **PREVIEW** to audition it.
-6. Stop Live and put the Arrangement cursor where the generated clip should
+1. Extract the complete XPre download and keep `XPre.amxd` and
+   `xpre_engine.js` together. Add that folder to Live's Browser under
+   **Places**.
+2. Put `XPre.amxd` on a dedicated Arrangement audio track.
+3. Drop an audio file from Live's Browser or Finder into the source area.
+4. Set **REVERB** and **MIX**.
+5. Press **GENERATE**. Generating again replaces the current internal result.
+6. Press **PREVIEW** to audition it.
+7. Stop Live and put the Arrangement cursor where the generated clip should
    begin.
-7. Press **PLACE**. XPre writes a unique WAV beside the saved Live Set and
+8. Press **PLACE**. XPre writes a unique WAV beside the saved Live Set and
    creates an audio clip on XPre's own track at that position.
 
 PLACE refuses overlaps and never deletes existing clips. An unsaved Set falls

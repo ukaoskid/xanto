@@ -12,10 +12,11 @@ const boxes = Object.fromEntries(
     patch.patcher.boxes.map((entry) => [entry.box.id, entry.box])
 );
 
-// A dragged AMXD is hosted from Live's internal location. Bind development
-// dependencies explicitly in the package while leaving the maxpat portable.
-const generatorPath = path.join(root, "xkeys_generate.js");
-const voicePath = path.join(root, "xkeys_voice.maxpat");
+// Keep dependency names relative so the package is portable when the complete
+// XKeys folder is copied to another machine. A frozen distribution build will
+// embed these files into the AMXD.
+const generatorPath = "xkeys_generate.js";
+const voicePath = "xkeys_voice.maxpat";
 
 boxes.js.text = `js ${generatorPath}`;
 boxes.js.saved_object_attributes = {
@@ -23,6 +24,27 @@ boxes.js.saved_object_attributes = {
     parameter_enable: 0
 };
 boxes.poly.text = `poly~ ${voicePath} 8 @steal 1`;
+
+patch.patcher.project = {
+    version: 1,
+    creationdate: 3868759470,
+    modificationdate: 3868759470,
+    viewrect: [0, 0, 300, 500],
+    autoorganize: 1,
+    hideprojectwindow: 1,
+    showdependencies: 1,
+    autolocalize: 0,
+    contents: { patchers: {} },
+    layout: {},
+    searchpath: {},
+    detailsvisible: 0,
+    amxdtype: 1768515945,
+    readonly: 0,
+    devpathtype: 0,
+    devpath: ".",
+    sortmode: 0,
+    viewmode: 0
+};
 
 const patchJson = Buffer.from(`${JSON.stringify(patch, null, 2)}\n`, "utf8");
 const formHeader = Buffer.concat([

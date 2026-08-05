@@ -22,6 +22,17 @@ or build a pre-reverb without leaving Live.
 Each project contains an editable `.maxpat`, a packaged `.amxd`, its engine or
 voice files, a focused README, and build tooling where needed.
 
+## Install
+
+Use the complete ZIP downloads from the [Xanto project site](https://ukaoskid.github.io/xanto/#devices).
+Extract a device and keep every included file together. Do not download a bare
+`.amxd` for XPad, XKeys, XRev, or XPre because those devices use the included
+engine or voice files. Add the extracted folder to Live's Browser under
+**Places**, then drag the `.amxd` from there.
+
+XOrds is self-contained, but it is a MIDI effect rather than an instrument.
+Place it before an instrument on the same MIDI track.
+
 ## Repository layout
 
 ```text
@@ -55,10 +66,10 @@ node xpre/tools/test-engine.js
 
 ## Max for Live packaging note
 
-XOrds embeds its engine and is self-contained. The development builds of XPad,
-XKeys, XRev, and XPre resolve sidecar files from their checkout location. When
-preparing those devices for distribution, open them in Max and use **Freeze
-Device** so their dependencies travel with the `.amxd`.
+XOrds embeds its engine and is self-contained. XPad, XKeys, XRev, and XPre use
+portable relative dependency names and are distributed as complete folders.
+For single-file distribution, open those devices in Max and use **Freeze
+Device** so their dependencies are embedded in the `.amxd`.
 
 ## Documentation
 

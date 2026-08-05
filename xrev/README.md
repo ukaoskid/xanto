@@ -5,12 +5,15 @@ note, reverse each slice, crossfade, and place it back” workflow.
 
 ## Use
 
-1. Put `XRev.amxd` on an audio track.
-2. Drag an audio clip (or an audio file from Finder/Live's Browser) onto the drop zone.
-3. Click **PROCESS**. XRev detects note/chord attacks and reverses every detected
+1. Extract the complete XRev download and keep `XRev.amxd` and
+   `xrev_engine.js` together. Add that folder to Live's Browser under
+   **Places**.
+2. Put `XRev.amxd` on an audio track.
+3. Drag an audio clip (or an audio file from Finder/Live's Browser) onto the drop zone.
+4. Click **PROCESS**. XRev detects note/chord attacks and reverses every detected
    cell independently, without moving it or changing the total sample length.
-4. Click **PREVIEW** to audition it.
-5. Put Live's Arrangement insertion cursor where the result should start and
+5. Click **PREVIEW** to audition it.
+6. Put Live's Arrangement insertion cursor where the result should start and
    click **PLACE**. Keep transport stopped and make sure the target range is free.
 
 **Sensitivity** controls how many attacks are detected. Raise it if separate

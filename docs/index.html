@@ -24,6 +24,7 @@
     <a class="wordmark" href="#top" aria-label="Xanto home">XANTO<span aria-hidden="true">°</span></a>
     <nav aria-label="Primary navigation">
       <a href="#devices">Devices</a>
+      <a href="#install">Install</a>
       <a href="#principles">Principles</a>
       <a class="repo-link" href="https://github.com/ukaoskid/xanto">GitHub ↗</a>
     </nav>
@@ -55,7 +56,7 @@
           <p class="device-type">MIDI instrument</p>
           <h3>XPad</h3>
           <p>Generate evolving, playable pads built from hybrid synthesis and character effects.</p>
-          <a href="https://github.com/ukaoskid/xanto/tree/main/xpad">Explore XPad <span aria-hidden="true">→</span></a>
+          <div class="card-actions"><a class="download" href="downloads/XPad.zip" download>Download ZIP</a><a href="https://github.com/ukaoskid/xanto/tree/main/xpad">Source <span aria-hidden="true">→</span></a></div>
         </article>
 
         <article class="device-card accent-cyan">
@@ -63,7 +64,7 @@
           <p class="device-type">MIDI instrument</p>
           <h3>XKeys</h3>
           <p>Move from felt and tine colors to plucks, mallets, and hybrid keyboard sounds.</p>
-          <a href="https://github.com/ukaoskid/xanto/tree/main/xkeys">Explore XKeys <span aria-hidden="true">→</span></a>
+          <div class="card-actions"><a class="download" href="downloads/XKeys.zip" download>Download ZIP</a><a href="https://github.com/ukaoskid/xanto/tree/main/xkeys">Source <span aria-hidden="true">→</span></a></div>
         </article>
 
         <article class="device-card accent-lime featured">
@@ -71,7 +72,7 @@
           <p class="device-type">MIDI effect</p>
           <h3>XOrds</h3>
           <p>Play a genre-aware, scale-aware bank of 25 voiced chords from a MIDI keyboard.</p>
-          <a href="https://github.com/ukaoskid/xanto/tree/main/xords">Explore XOrds <span aria-hidden="true">→</span></a>
+          <div class="card-actions"><a class="download" href="downloads/XOrds.zip" download>Download ZIP</a><a href="https://github.com/ukaoskid/xanto/tree/main/xords">Source <span aria-hidden="true">→</span></a></div>
         </article>
 
         <article class="device-card accent-orange">
@@ -79,7 +80,7 @@
           <p class="device-type">Audio effect</p>
           <h3>XRev</h3>
           <p>Detect musical slices, reverse each one independently, and keep the timing intact.</p>
-          <a href="https://github.com/ukaoskid/xanto/tree/main/xrev">Explore XRev <span aria-hidden="true">→</span></a>
+          <div class="card-actions"><a class="download" href="downloads/XRev.zip" download>Download ZIP</a><a href="https://github.com/ukaoskid/xanto/tree/main/xrev">Source <span aria-hidden="true">→</span></a></div>
         </article>
 
         <article class="device-card accent-pink">
@@ -87,9 +88,22 @@
           <p class="device-type">Audio effect</p>
           <h3>XPre</h3>
           <p>Create a source-length pre-reverb and place the rendered result directly in Live.</p>
-          <a href="https://github.com/ukaoskid/xanto/tree/main/xpre">Explore XPre <span aria-hidden="true">→</span></a>
+          <div class="card-actions"><a class="download" href="downloads/XPre.zip" download>Download ZIP</a><a href="https://github.com/ukaoskid/xanto/tree/main/xpre">Source <span aria-hidden="true">→</span></a></div>
         </article>
       </div>
+    </section>
+
+    <section class="install" id="install" aria-labelledby="install-title">
+      <div class="section-heading">
+        <p class="eyebrow">Install correctly</p>
+        <h2 id="install-title">Keep the device together.</h2>
+      </div>
+      <ol class="install-steps">
+        <li><span>01</span><div><h3>Download the ZIP</h3><p>Use the download on this page instead of saving an individual AMXD from GitHub.</p></div></li>
+        <li><span>02</span><div><h3>Extract the folder</h3><p>Keep the AMXD and every included engine or voice file in the same folder.</p></div></li>
+        <li><span>03</span><div><h3>Add it to Places</h3><p>Add the extracted folder to Live's Browser under Places, then load the device from there.</p></div></li>
+      </ol>
+      <p class="install-note"><strong>XOrds is MIDI-only.</strong> Put it before an instrument on the same MIDI track; it generates notes rather than sound.</p>
     </section>
 
     <section class="principles" id="principles" aria-labelledby="principles-title">
